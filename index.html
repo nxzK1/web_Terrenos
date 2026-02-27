@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Venta de terrenos en la Playa - Tu sueño, mas cerca de ti.</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-green-50 text-gray-800">
+
+    <!-- Header/Nav -->
+<nav id="navbar" class="navbar fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-lg z-50 transition-all duration-300 overflow-hidden">
+    <div class="w-full px-3 sm:px-6 lg:px-8">
+        <div class="max-w-[100vw] mx-auto flex justify-between items-center py-3 sm:py-4 h-auto">
+            <!-- Logo -->
+            <div class="text-m sm:text-sm lg:text-base font-bold bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent min-w-0 truncate leading-tight max-w-[40%]">
+                <span class="block sm:hidden">Terrenos S. Valdés</span>
+                <span class="hidden sm:inline">Terrenos Sebastian Valdés</span>
+            </div>
+            
+            <!-- Menú desktop -->
+            <div class="hidden lg:flex space-x-6 items-center flex-shrink-0">
+                <a href="#inicio" class="hover:text-green-500 transition-colors font-medium">Inicio</a>
+                <a href="#terrenos" class="hover:text-green-500 transition-colors font-medium">Terrenos</a>
+                <a href="#nosotros" class="hover:text-green-500 transition-colors font-medium">Nosotros</a>
+                <a href="#contacto" class="hover:text-green-500 transition-colors font-medium">Contacto</a>
+            </div>
+            
+            <!-- WhatsApp desktop -->
+            <a href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20saber%20más%20sobre%20los%20terrenos%20en%20la%20playa." 
+               class="hidden md:inline-flex items-center gap-2 bg-green-500 text-white px-3 py-2 rounded-full font-semibold 
+                      hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 text-sm flex-shrink-0 ml-2">
+                <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+            </a>
+            
+            <!-- Hamburguesa -->
+            <button id="menu-toggle" class="lg:hidden p-1.5 rounded hover:bg-gray-100 transition-colors ml-1 flex-shrink-0">
+                <i class="fas fa-bars text-xl text-slate-800"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="lg:hidden bg-white/95 backdrop-blur-md shadow-2xl border-t border-gray-200 hidden">
+        <div class="px-4 py-4 space-y-2">
+            <a href="#inicio" class="block px-4 py-3 rounded-lg hover:text-green-500 hover:bg-green-50 transition-all w-full">Inicio</a>
+            <a href="#terrenos" class="block px-4 py-3 rounded-lg hover:text-green-500 hover:bg-green-50 transition-all w-full">Terrenos</a>
+            <a href="#nosotros" class="block px-4 py-3 rounded-lg hover:text-green-500 hover:bg-green-50 transition-all w-full">Nosotros</a>
+            <a href="#contacto" class="block px-4 py-3 rounded-lg hover:text-green-500 hover:bg-green-50 transition-all w-full">Contacto</a>
+            <a href="https://wa.me/56912345678?text=Hola%20Sebastian,%20desde%20menú%20móvil" 
+               class="block w-full px-4 py-4 mt-4 bg-green-500 text-white rounded-xl text-center font-semibold shadow-lg 
+                      hover:bg-green-600 hover:shadow-xl transition-all">
+                <i class="fab fa-whatsapp mr-2"></i>WhatsApp Sebastian</a>
+        </div>
+    </div>  
+</nav>
+
+    <!-- Hero -->
+    <section id="inicio" class="min-h-screen bg-cover bg-center flex items-center justify-center text-white" 
+            style="background-image: url('img/Playa-pichicuy.jpg');">
+        <div class="text-center px-4 max-w-4xl mx-auto" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 drop-shadow-2xl">Terrenos en la Playa</h1>
+            <p class="text-xl md:text-2xl mb-8 drop-shadow-lg">Tu primer terreno en la playa, más cerca de lo que imaginas.</p>
+            <a href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20saber%20más%20sobre%20los%20terrenos%20en%20la%20playa." 
+               class="inline-block bg-green-500 text-white px-10 py-4 rounded-full text-xl font-semibold shadow-2xl hover:bg-green-600 hover:scale-105 transition-all duration-300">
+                <i class="fab fa-whatsapp mr-3"></i>Contactar Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- Terrenos -->
+    <section id="terrenos" class="py-24 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-20" data-aos="zoom-in">
+            <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent mb-6">Proyectos Disponibles</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Selecciona el tuyo y empieza a soñar con tu casa cerca al mar.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Cards -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                <img src="img/card-maitenes.jpg" alt="Proyecto Maitenes" class="w-full h-64 object-cover max-w-full">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2">Proyecto Fundo los Maitenes</h3>
+                    <p class="text-3xl font-bold text-green-500 mb-4">desde $4.500.000</p>
+                    <ul class="text-gray-600 space-y-1 mb-6">
+                        <li>Sitios desde 500 m² aprox.</li>
+                        <li>Factibilidad eléctrica.</li>
+                        <li>Agua por camión aljibe.</li>
+                        <li>Escritura individual (SPA).</li>
+                        <li>Factibilidad de internet por Fibra Óptica.</li>
+                        <li>Portón automatizado.</li>
+                        <li>Camaras de seguridad.</li>
+                    </ul>
+                    <a href="https://wa.me/56912345678?text=Hola,%20quiero%20mas%20información%20del%20proyecto%20los%20Maitenes." 
+                       class="w-full block bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-xl text-center font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300">
+                        <i class="fab fa-whatsapp mr-2"></i>Consultar
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                <img src="img/card-quillayes.jpeg" alt="Proyecto Quillayes" class="w-full h-64 object-cover max-w-full">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2">Proyecto Fundo los Quillayes</h3>
+                    <p class="text-3xl font-bold text-green-500 mb-4">desde $3.900.000</p>
+                    <ul class="text-gray-600 space-y-1 mb-6">
+                        <li>Sitios desde 500 m² aprox.</li>
+                        <li>Factibilidad eléctrica.</li>
+                        <li>Agua por camión aljibe.</li>
+                        <li>Escritura individual (SPA).</li>
+                        <li>Factibilidad de internet por Fibra Óptica.</li>
+                        <li>Caminos estabilizados.</li>
+                        <li>Terrenos planos y semi-planos.</li>
+                    </ul>
+                    <a href="https://wa.me/56912345678?text=Hola,%20quiero%20mas%20información%20del%20proyecto%20Fundo%20Los%20Quillayes." 
+                       class="w-full block bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-xl text-center font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300">
+                        <i class="fab fa-whatsapp mr-2"></i>Consultar
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                <img src="img/card-mahuida.jpg" alt="Proyecto Mahuida" class="w-full h-64 object-cover max-w-full">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2">Proyecto Mahuida</h3>
+                    <p class="text-3xl font-bold text-green-500 mb-4">desde $4.500.000</p>
+                    <ul class="text-gray-600 space-y-1 mb-6">
+                        <li>Sitios desde 500 m² aprox.</li>
+                        <li>Factibilidad eléctrica.</li>
+                        <li>Agua por camión aljibe.</li>
+                        <li>Escritura individual (SPA).</li>
+                        <li>Factibilidad de internet por Fibra Óptica.</li>
+                        <li>Caminos estabilizados.</li>
+                        <li>Terrenos planos y semi-planos.</li>
+                        <li>Ruta 5 Norte, Km 170.</li>
+                    </ul>
+                    <a href="https://wa.me/56912345678?text=Hola,%20quiero%20mas%20información%20del%20proyecto%20Mahuida." 
+                       class="w-full block bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-xl text-center font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300">
+                        <i class="fab fa-whatsapp mr-2"></i>Consultar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="py-24 px-4 bg-gradient-to-br from-blue-50 to-green-50">
+        <div class="max-w-6xl mx-auto">
+            <!-- Título -->
+            <div class="text-center mb-20" data-aos="zoom-in">
+                <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent mb-6">
+                    Quienes somos.
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Mas de 2 años vendiendo terrenos en la 5ta región de Chile, ayudando a familias a cumplir su sueño de tener una casa mas cerca de la playa.
+                </p>
+            </div>
+
+            <!-- Contenido -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Foto de tu hermano/equipo -->
+                <div data-aos="fade-right">
+                    <img src="img/user.jpg" alt="Insertar imagen" 
+                         class="w-full h-96 object-cover rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <!-- Texto -->
+                <div data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="text-3xl font-bold mb-6 text-gray-800">Sebastian Valdés</h3>
+                    <div class="space-y-6 mb-8">
+                        <div>
+                            <div class="text-2xl font-bold text-green-500 mb-2">+2 años de experiencia</div>
+                            <p class="text-gray-600">Vendiendo terrenos cerca de las playas de la 5ta región de Chile.</p>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-green-500 mb-2">+10 familias felices</div>
+                            <p class="text-gray-600">Clientes que hoy disfrutan su casa cerca al mar.</p>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-green-500 mb-2">Garantía total</div>
+                            <p class="text-gray-600">Documentación al día, sin deudas ni problemas legales.</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300">
+                            <i class="fas fa-shield-alt text-3xl text-green-500 mb-3"></i>
+                            <div class="font-bold text-lg">Seguridad</div>
+                            <div class="text-sm text-gray-600">100% legal</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300">
+                            <i class="fas fa-clock text-3xl text-blue-500 mb-3"></i>
+                            <div class="font-bold text-lg">Rapidez</div>
+                            <div class="text-sm text-gray-600">Entrega inmediata</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <section class="bg-white py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-3xl font-bold text-center mb-8">Ubicación Referencial</h3>
+            <div class="rounded-2xl overflow-hidden shadow-lg">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3370.4452266913513!2d-71.4212417!3d-32.3535999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x968909329fa340a3%3A0xfb8164b4339275bb!2sHuaqu%C3%A9n%20ruta%20E-251%20km%20170%20ruta%205%20norte!5e0!3m2!1ses-419!2scl!4v1771976207213!5m2!1ses-419!2scl"
+                width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- === REDES SOCIALES PRINCIPAL (PASO 2) === -->
+    <section class="py-12 px-4 bg-gradient-to-br from-green-50 to-teal-50">
+        <div class="max-w-md mx-auto text-center">
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-6">Contactame a traves de mis Redes sociales</h3>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/56912345678?text=Hola%20Sebastian%20quisiera%20mas%20informacion" 
+                   class="flex items-center justify-center gap-3 p-4 bg-green-500 hover:bg-green-600 text-white rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.05] transition-all w-full">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span class="font-semibold text-sm sm:text-base">WhatsApp</span>
+                </a>
+                <!-- Instagram -->
+                <a href="https://instagram.com/tuusuario" 
+                   class="flex items-center justify-center gap-3 p-4 bg-gradient-to-br from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.05] transition-all w-full">
+                    <i class="fab fa-instagram text-xl"></i>
+                    <span class="font-semibold text-sm sm:text-base">Instagram</span>
+                </a>
+                <!-- Facebook -->
+                <a href="https://facebook.com/tuusuario" 
+                   class="flex items-center justify-center gap-3 p-4 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.05] transition-all w-full">
+                    <i class="fab fa-facebook text-xl"></i>
+                    <span class="font-semibold text-sm sm:text-base">Facebook</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="contacto" class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <p>&copy; 2026 Terrenos Sebastian Valdés. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <!-- AOS JavaScript (OBLIGATORIO ANTES de script.js) -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+    
+    // ===== SMOOTH SCROLL MEJORADO (arregla "Inicio") =====
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                
+                if (target) {
+                    // Compensar altura del navbar fijo (80px aprox)
+                    const navbarHeight = 80;
+                    const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Cerrar menú móvil si está abierto
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu?.classList.add('hidden');
+                }
+            });
+        });
+    });
+    
+    // ===== HAMBURGUESA (tu código que ya funciona) =====
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuToggle?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+    });
+    
+    // Cerrar menú al tocar enlaces
+    mobileMenu?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu?.classList.add('hidden');
+        });
+    });
+    
+    // Cerrar al tocar fuera
+    document.addEventListener('click', (e) => {
+        if (!mobileMenu?.contains(e.target) && !menuToggle?.contains(e.target)) {
+            mobileMenu?.classList.add('hidden');
+        }
+    });
+</script>
+    
+    <!-- Tu script.js aquí -->
+    <script src="script.js"></script>
+</body>
+</html>
