@@ -2,7 +2,7 @@
 
 Landing page profesional para la venta de terrenos en la playa, 5ta Región de Chile. Diseño "Coastal Premium" con animaciones GSAP, micro-interacciones en las cards y pipeline de build con Tailwind CSS CLI.
 
-**Producción:** [webventaterrenos.vercel.app](https://webventaterrenos.vercel.app)
+**Producción:** [Venta_terrenos](https://ventas-sebastianvaldes.vercel.app/)
 **Repositorio:** [github.com/nxzK1/web_Terrenos](https://github.com/nxzK1/web_Terrenos)
 
 ---
