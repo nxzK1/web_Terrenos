@@ -1,27 +1,23 @@
-# Web venta de terrenos
+# Webpage de venta de terrenos (vitrina)
 
-Landing page profesional para la venta de terrenos en la playa, 5ta Región de Chile.
+Landing page profesional para la venta de terrenos en la playa, 5ta Región de Chile. Diseño "Coastal Premium" con animaciones GSAP, micro-interacciones en las cards y pipeline de build con Tailwind CSS CLI.
 
----
-
-## Vista general
-
-Sitio web de una sola página (SPA-like) construido con HTML semántico, Tailwind CSS compilado y JavaScript vanilla. Diseño "Coastal Premium" con animaciones GSAP, micro-interacciones y arquitectura orientada a conversión vía WhatsApp.
-
-**URL de producción:** [vercel.app](https://web-terrenos.vercel.app) _(actualizar con la URL real)_
+**Producción:** [webventaterrenos.vercel.app](https://webventaterrenos.vercel.app)
+**Repositorio:** [github.com/nxzK1/web_Terrenos](https://github.com/nxzK1/web_Terrenos)
 
 ---
 
-## Stack tecnológico
+## Stack
 
-| Tecnología             | Versión    | Uso                                    |
-| ---------------------- | ---------- | -------------------------------------- |
-| HTML5                  | —          | Estructura semántica                   |
-| Tailwind CSS           | 3.4.x      | Estilos utilitarios                    |
-| PostCSS + Autoprefixer | 8.x / 10.x | Pipeline de CSS                        |
-| GSAP                   | 3.12.5     | Animaciones y ScrollTrigger            |
-| Font Awesome           | 6.5.1      | Iconografía                            |
-| Google Fonts           | —          | Plus Jakarta Sans + Cormorant Garamond |
+| Tecnología             | Versión      | Rol                                    |
+| ---------------------- | ------------ | -------------------------------------- |
+| HTML5                  | —            | Estructura semántica                   |
+| Tailwind CSS CLI       | ^3.4.4       | Estilos utilitarios compilados         |
+| PostCSS + Autoprefixer | ^8.4 / ^10.4 | Pipeline de transformación CSS         |
+| GSAP + ScrollTrigger   | 3.12.5       | Animaciones y efectos de scroll        |
+| Font Awesome           | 6.5.1        | Iconografía                            |
+| Google Fonts           | —            | Plus Jakarta Sans + Cormorant Garamond |
+| Vercel                 | —            | Hosting + CI/CD automático             |
 
 ---
 
@@ -30,34 +26,30 @@ Sitio web de una sola página (SPA-like) construido con HTML semántico, Tailwin
 ```
 web_Terrenos/
 ├── src/
-│   └── input.css          # Fuente Tailwind — editar aquí los estilos
+│   └── input.css            # Fuente Tailwind — editar estilos aquí
 ├── dist/
-│   └── styles.css         # CSS compilado y minificado (auto-generado)
+│   └── styles.css           # CSS compilado y minificado (auto-generado)
 ├── img/
-│   ├── Playa-pichicuy.jpg # Imagen hero
-│   ├── card-maitenes.jpg  # Card proyecto Los Maitenes
-│   ├── card-quillayes.jpeg# Card proyecto Los Quillayes
-│   ├── card-mahuida.jpg   # Card proyecto Mahuida
-│   └── user.jpg           # Foto Vendedor
-├── index.html             # HTML principal
-├── script.js              # JavaScript — animaciones y micro-UIs
-├── tailwind.config.js     # Configuración Tailwind + paleta de colores
-├── postcss.config.js      # PostCSS con autoprefixer
-├── package.json           # Dependencias y scripts npm
-├── vercel.json            # Configuración de deploy + headers de seguridad
-└── README.md              # Este archivo
+│   ├── Playa-pichicuy.jpg   # Imagen hero
+│   ├── card-maitenes.jpg    # Card Fundo Los Maitenes
+│   ├── card-quillayes.jpeg  # Card Fundo Los Quillayes
+│   ├── card-mahuida.jpg     # Card Proyecto Mahuida
+│   └── user.jpg             # Foto vendedor
+├── index.html               # HTML principal — una sola página
+├── script.js                # JavaScript — animaciones y micro-UIs
+├── tailwind.config.js       # Config Tailwind: paleta, safelist, content paths
+├── postcss.config.js        # PostCSS con autoprefixer
+├── package.json             # Dependencias y scripts npm
+├── vercel.json              # Deploy config + headers de seguridad HTTP
+├── .gitignore               # Excluye node_modules y archivos temporales
+└── README.md                # Este archivo
 ```
 
 ---
 
 ## Setup local
 
-### Requisitos
-
-- Node.js 18 o superior
-- npm 9 o superior
-
-### Instalación
+**Requisitos:** Node.js 18+ y npm 9+
 
 ```bash
 # 1. Clonar el repositorio
@@ -67,156 +59,169 @@ cd web_Terrenos
 # 2. Instalar dependencias
 npm install
 
-# 3. Compilar CSS
+# 3. Compilar el CSS
 npm run build
 
-# 4. Abrir index.html en el navegador
-# (Usar Live Server en VS Code o similar)
+# 4. Levantar servidor local
+npx serve .
+# Abrir http://localhost:3000
 ```
+
+> No abrir index.html con doble click — usar siempre un servidor HTTP para
+> que las rutas relativas, fuentes e imágenes carguen correctamente.
 
 ### Scripts disponibles
 
 ```bash
 npm run dev      # Compila y observa cambios en tiempo real
-npm run build    # Compila y minifica para producción
-npm run clean    # Elimina la carpeta dist/
+npm run build    # Compila y minifica para producción (~40-60 KB)
+npm run clean    # Elimina y recrea la carpeta dist/
 ```
 
 ---
 
-## Flujo de trabajo
+## Flujo de trabajo diario
 
 ```bash
-# Durante el desarrollo
+# Trabajar
 npm run dev
 
-# Al terminar — subir cambios
+# Verificar build antes de subir
+npm run build
+ls -lh dist/styles.css   # Debe pesar entre 40KB y 60KB
+
+# Subir — Vercel despliega automáticamente
 git add .
 git commit -m "descripción del cambio"
-git push         # Vercel despliega automáticamente
+git push
 ```
 
 ---
 
 ## Secciones del sitio
 
-| Sección   | ID          | Descripción                                              |
-| --------- | ----------- | -------------------------------------------------------- |
-| Hero      | `#inicio`   | Imagen de playa, headline cinematográfico, CTAs WhatsApp |
-| Stats     | —           | Contadores animados: familias, años, proyectos           |
-| Proyectos | `#terrenos` | Cards interactivas de los 3 proyectos disponibles        |
-| Filosofía | —           | Manifiesto con parallax y contraste tipográfico          |
-| Nosotros  | `#nosotros` | Perfil del Vendedor + pilares de confianza               |
-| Ubicación | —           | Mapa embebido de Google Maps                             |
-| Footer    | `#contacto` | Links, redes sociales, CTA final                         |
+| Sección   | Anchor      | Descripción                                                                      |
+| --------- | ----------- | -------------------------------------------------------------------------------- |
+| Hero      | `#inicio`   | Imagen de playa, headline con tipografía contrastante, animación GSAP de entrada |
+| Stats     | —           | Contadores animados: familias, años de experiencia, proyectos activos            |
+| Proyectos | `#terrenos` | 3 cards con micro-UIs interactivas y CTA a WhatsApp                              |
+| Filosofía | —           | Manifiesto con parallax de fondo y contraste tipográfico                         |
+| Nosotros  | `#nosotros` | Perfil del vendedor + pilares de confianza animados                              |
+| Ubicación | —           | Mapa embebido de Google Maps — Sector Huaquén, Ruta 5 Norte Km 170               |
+| Footer    | `#contacto` | Links, redes sociales, CTA final de conversión                                   |
 
-### Micro-interacciones por card
+### Micro-UIs en las cards de proyectos
 
-- **Los Maitenes** — Feature Shuffler: chips de características rotan con animación spring-bounce cada 2.6s
-- **Los Quillayes** — Typewriter Feed: texto en tiempo real simulando estado del proyecto
-- **Mahuida** — Process Steps: animador secuencial del proceso de compra (4 pasos)
+Cada card tiene una animación funcional distinta que simula software real:
 
----
+**Fundo Los Maitenes** — Feature Shuffler: lista de características que rota verticalmente con efecto spring-bounce cada 2.6 segundos.
 
-## Paleta de colores
+**Fundo Los Quillayes** — Typewriter Feed: texto que se escribe y borra en tiempo real simulando el estado actualizado del proyecto, con cursor parpadeante e indicador de estado activo.
 
-| Nombre     | Hex       | Variable CSS   | Uso principal               |
-| ---------- | --------- | -------------- | --------------------------- |
-| Verde      | `#10B981` | `--verde`      | Primario, CTAs, badges      |
-| Verde Dark | `#059669` | `--verde-dark` | Hover de verde              |
-| Arena      | `#F59E0B` | `--arena`      | Acento, énfasis tipográfico |
-| Arena Dark | `#D97706` | `--arena-dark` | Hover de arena              |
-| Cielo      | `#0EA5E9` | `--cielo`      | Secundario, información     |
-| Oscuro     | `#1E293B` | `--oscuro`     | Texto, fondos oscuros       |
-| Cream      | `#F8F6F1` | `--cream`      | Fondo principal             |
+**Proyecto Mahuida** — Process Steps: animador secuencial de los 4 pasos del proceso de compra (Contacto → Visita → Firma → Entrega), con transición visual paso a paso.
 
 ---
 
-## Tipografía
+## Sistema de diseño
 
-| Familia            | Peso                    | Uso                                  |
-| ------------------ | ----------------------- | ------------------------------------ |
-| Plus Jakarta Sans  | 300, 400, 500, 700, 800 | Cuerpo, títulos, UI general          |
-| Cormorant Garamond | 400, 600, italic        | Énfasis dramático, taglines, nombres |
+### Paleta de colores
+
+Los colores están definidos en formato `rgb(R G B / <alpha-value>)` en `tailwind.config.js`. Este formato es **obligatorio** para que funcionen los modificadores de opacidad de Tailwind (`bg-verde/10`, `text-arena/70`, etc.).
+
+| Nombre       | Hex       | Uso                                        |
+| ------------ | --------- | ------------------------------------------ |
+| `verde`      | `#10B981` | Primario — CTAs, badges, acentos positivos |
+| `verde-dark` | `#059669` | Hover sobre verde                          |
+| `arena`      | `#F59E0B` | Acento — énfasis tipográfico, precios      |
+| `arena-dark` | `#D97706` | Hover sobre arena                          |
+| `cielo`      | `#0EA5E9` | Secundario — información, highlights       |
+| `oscuro`     | `#1E293B` | Texto principal, fondos oscuros            |
+| `cream`      | `#F8F6F1` | Fondo base de la página                    |
+
+### Tipografía
+
+| Familia            | Pesos                   | Uso                                           |
+| ------------------ | ----------------------- | --------------------------------------------- |
+| Plus Jakarta Sans  | 300, 400, 500, 700, 800 | UI general, cuerpo, títulos                   |
+| Cormorant Garamond | 400, 600, italic        | Énfasis dramático — taglines, nombres propios |
+
+### Componentes animados
+
+- **Navbar flotante:** transparente sobre el hero, transiciona a glassmorphism (blur + fondo cream al 92%) al hacer scroll
+- **Animaciones de entrada (GSAP):** cada sección se revela con fade-up y stagger al entrar en el viewport vía ScrollTrigger
+- **Parallax:** la imagen de fondo de la sección Filosofía tiene efecto parallax scrub con GSAP
+- **Contadores:** los números de la barra de stats se animan con easing cúbico al entrar en pantalla
+- **Magnetic buttons:** todos los CTAs tienen micro-interacción de scale en hover y active
 
 ---
 
-## Seguridad (vercel.json)
+## Decisiones técnicas relevantes
 
-Headers de seguridad configurados para producción:
+**Tailwind CLI en vez de CDN:** el CDN carga ~3.8MB de CSS. La versión compilada genera entre 40-60KB incluyendo solo las clases efectivamente usadas — una reducción de más del 98% en peso de CSS.
 
-- `Strict-Transport-Security` — Fuerza HTTPS por 2 años
-- `Content-Security-Policy` — Restringe orígenes de scripts, estilos e imágenes
-- `X-Frame-Options` — Previene clickjacking
-- `X-Content-Type-Options` — Previene MIME sniffing
-- `Referrer-Policy` — Controla información enviada en cabeceras Referer
-- `Permissions-Policy` — Deshabilita cámara, micrófono, geolocalización y pagos
+**Safelist en tailwind.config.js:** las clases con modificadores de opacidad (`bg-verde/10`, `text-white/65`) y las clases de componentes custom están protegidas con patrones regex en el `safelist` para evitar que el purge de Tailwind las elimine al no detectarlas en el escaneo estático del HTML.
 
-Cache configurado por tipo de recurso:
+**Progressive enhancement en JS:** GSAP es opcional. Si el script falla por cualquier razón, el sitio es 100% visible y funcional. GSAP enriquece la experiencia pero nunca la bloquea.
 
-- Imágenes (`/img/*`) → 1 año, inmutable
-- CSS compilado (`/dist/styles.css`) → 1 día, revalidación obligatoria
-- JavaScript (`/script.js`) → 1 día, revalidación obligatoria
+**Compatibilidad móvil en script.js:** el archivo usa sintaxis ES5 compatible con todos los WebViews móviles (Safari iOS, Chrome Android) para evitar errores de parsing. No usa `'use strict'` ni caracteres especiales en strings.
+
+**offsetTop en navegación móvil:** el smooth scroll usa `offsetTop` en vez de `getBoundingClientRect()` para evitar el bug de posicionamiento incorrecto causado por el reflow del DOM al cerrar el menú antes de calcular el destino del scroll.
+
+---
+
+## Seguridad
+
+Headers HTTP configurados en `vercel.json`, aplicados en producción:
+
+| Header                      | Protección                                                      |
+| --------------------------- | --------------------------------------------------------------- |
+| `Strict-Transport-Security` | Fuerza HTTPS por 2 años en todos los subdominios                |
+| `Content-Security-Policy`   | Restringe orígenes permitidos de scripts, estilos e imágenes    |
+| `X-Frame-Options`           | Previene clickjacking — solo permite embeds del mismo origen    |
+| `X-Content-Type-Options`    | Previene MIME sniffing en navegadores                           |
+| `Referrer-Policy`           | Controla la información enviada en cabeceras Referer            |
+| `Permissions-Policy`        | Deshabilita acceso a cámara, micrófono, geolocalización y pagos |
+
+Cache por tipo de recurso:
+
+| Recurso            | Estrategia             |
+| ------------------ | ---------------------- |
+| `/img/*`           | 1 año, inmutable       |
+| `/dist/styles.css` | 1 día, must-revalidate |
+| `/script.js`       | 1 día, must-revalidate |
 
 ---
 
 ## Deploy en Vercel
 
-El proyecto se despliega automáticamente en cada `git push` a `main`.
+El proyecto se conecta directamente al repositorio de GitHub. Cada `git push` a `main` genera un deploy automático.
 
-### Configuración del proyecto en Vercel
+**Configuración del proyecto en Vercel Dashboard:**
 
-| Campo            | Valor           |
-| ---------------- | --------------- |
-| Framework Preset | `Other`         |
-| Build Command    | `npm run build` |
-| Output Directory | `.` (raíz)      |
-| Install Command  | `npm install`   |
-
-### Deploy manual
-
-```bash
-npm install -g vercel   # Solo la primera vez
-npm run build
-vercel --prod
-```
+| Campo            | Valor                   |
+| ---------------- | ----------------------- |
+| Framework Preset | `Other`                 |
+| Install Command  | `npm install`           |
+| Build Command    | `npm run build`         |
+| Output Directory | `.` (raíz del proyecto) |
 
 ---
 
-## Proyectos disponibles
+## Proyectos en venta
 
 ### Fundo Los Maitenes
 
-- Precio desde **$4.500.000 CLP**
-- Sitios desde 500 m²
-- Factibilidad eléctrica y Fibra Óptica
-- Escritura individual (SPA)
-- Portón automatizado y cámaras de seguridad
+Desde **$4.500.000** · A 8 minutos de la playa · Sitios desde 500 m² · Factibilidad eléctrica y Fibra Óptica · Escritura individual (SPA) · Portón automatizado · Cámaras de seguridad · Caminos estabilizados
 
 ### Fundo Los Quillayes
 
-- Precio desde **$3.900.000 CLP**
-- Sitios desde 500 m²
-- Factibilidad eléctrica y Fibra Óptica
-- Escritura individual (SPA)
-- Caminos estabilizados, terrenos planos y semi-planos
+Desde **$2.000.000** · A 12 minutos de la playa · Sitios desde 500 m² · Factibilidad eléctrica y Fibra Óptica · Escritura individual (SPA) · Portón automatizado · Caminos estabilizados
 
 ### Proyecto Mahuida
 
-- Precio desde **$4.500.000 CLP**
-- Sitios desde 500 m²
-- Factibilidad eléctrica y Fibra Óptica
-- Escritura individual (SPA)
-- Ruta 5 Norte, Km 170
+Desde **$4.500.000** · A 12 minutos de la playa · Sitios desde 500 m² · Factibilidad eléctrica y Fibra Óptica · Escritura individual (SPA) · Portón automatizado · Caminos estabilizados
 
----
-
-## Contacto
-
-**Sebastián Valdés**
-WhatsApp: +56 9 1234 5678
-Instagram: [@tuusuario](https://instagram.com/tuusuario)
-Facebook: [tuusuario](https://facebook.com/tuusuario)
+**Ubicación:** Sector Huaquén · Ruta 5 Norte, Km 170 · V Región, Chile
 
 ---
 
