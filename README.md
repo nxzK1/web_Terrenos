@@ -1,8 +1,8 @@
-# Web venta de terrenos.
+# Webpage de venta de terrenos (vitrina)
 
 Landing page profesional para la venta de terrenos en la playa, 5ta Región de Chile. Diseño "Coastal Premium" con animaciones GSAP, micro-interacciones en las cards y pipeline de build con Tailwind CSS CLI.
 
-**Producción:** [webventaterrenos.vercel.app](https://webventaterrenos.vercel.app)
+**Producción:** [Venta_terrenos](https://ventas-sebastianvaldes.vercel.app/)
 **Repositorio:** [github.com/nxzK1/web_Terrenos](https://github.com/nxzK1/web_Terrenos)
 
 ---
@@ -34,7 +34,11 @@ web_Terrenos/
 │   ├── card-maitenes.jpg    # Card Fundo Los Maitenes
 │   ├── card-quillayes.jpeg  # Card Fundo Los Quillayes
 │   ├── card-mahuida.jpg     # Card Proyecto Mahuida
+<<<<<<< HEAD
 │   └── user.jpg             # Foto Vendedor
+=======
+│   └── user.jpg             # Foto vendedor
+>>>>>>> main
 ├── index.html               # HTML principal — una sola página
 ├── script.js                # JavaScript — animaciones y micro-UIs
 ├── tailwind.config.js       # Config Tailwind: paleta, safelist, content paths
