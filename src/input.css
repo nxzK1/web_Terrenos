@@ -91,6 +91,15 @@
     background-color: white;
   }
 
+  /* MENU MOVIL */
+  .mobile-menu {
+    pointer-events: all;
+  }
+  .mobile-link {
+    pointer-events: all;
+    cursor: pointer;
+  }
+
   /* Navbar scrolled */
   .navbar--scrolled .navbar-inner {
     background: rgba(248, 246, 241, 0.92);
