@@ -199,99 +199,6 @@ body {
   }
 }
 
-/* PROCESS STEPS */
-.process-step .step-dot {
-  transition:
-    background 0.4s var(--ease-spring),
-    border-color 0.4s,
-    color 0.3s,
-    transform 0.4s var(--ease-spring);
-}
-.process-step span {
-  transition:
-    color 0.4s,
-    font-weight 0.3s;
-}
-.process-step.active .step-dot {
-  background: var(--verde);
-  border-color: var(--verde);
-  color: white;
-  transform: scale(1.25);
-}
-.process-step.active span {
-  color: var(--oscuro);
-  font-weight: 700;
-}
-
-/* PHILOSOPHY */
-.philosophy-section {
-  background-color: var(--oscuro);
-}
-.philosophy-bg img {
-  filter: saturate(0.4) brightness(0.8);
-}
-
-/* cards Info */
-.trust-pill {
-  transition:
-    transform 0.3s var(--ease-smooth),
-    box-shadow 0.3s var(--ease-smooth);
-}
-.trust-pill:hover {
-  transform: translateX(5px);
-  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.12);
-}
-
-/* MAGNETIC BUTTONS */
-.magnetic-btn {
-  will-change: transform;
-  transition:
-    transform 0.2s var(--ease-spring),
-    background-color 0.25s var(--ease-smooth),
-    box-shadow 0.25s var(--ease-smooth);
-}
-.magnetic-btn:hover {
-  transform: scale(1.04) translateY(-1px);
-}
-.magnetic-btn:active {
-  transform: scale(0.97);
-}
-
-/* STAT HOVER */
-.stat-item {
-  transition: transform 0.3s var(--ease-spring);
-}
-.stat-item:hover {
-  transform: translateY(-3px);
-}
-
-/* FLOATING */
-.whatsapp-fab {
-  transition:
-    transform 0.25s var(--ease-spring),
-    background-color 0.25s var(--ease-smooth),
-    box-shadow 0.25s var(--ease-smooth);
-}
-.whatsapp-fab:hover {
-  transform: scale(1.06) translateY(-2px);
-  box-shadow: 0 16px 40px rgba(16, 185, 129, 0.45);
-}
-
-.scroll-top-btn {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(10px);
-  transition:
-    opacity 0.3s var(--ease-smooth),
-    transform 0.3s var(--ease-smooth),
-    background-color 0.25s;
-}
-.scroll-top-btn--visible {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
 /* SELECTION & SCROLLBAR */
 ::selection {
   background: rgba(16, 185, 129, 0.25);
@@ -329,4 +236,90 @@ body {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Dots inactivos */
+.swiper-maitenes .swiper-pagination-bullet,
+.swiper-quillayes .swiper-pagination-bullet,
+.swiper-mahuida .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.55);
+  opacity: 1;
+  transition:
+    width 0.3s ease,
+    background 0.3s ease;
+}
+
+/* Dot activo: se expande como pill */
+.swiper-maitenes .swiper-pagination-bullet-active,
+.swiper-quillayes .swiper-pagination-bullet-active,
+.swiper-mahuida .swiper-pagination-bullet-active {
+  width: 20px;
+  border-radius: 99px;
+  background: white;
+}
+
+/* Posicion de los dots sobre la imagen */
+.swiper-maitenes .swiper-pagination,
+.swiper-quillayes .swiper-pagination,
+.swiper-mahuida .swiper-pagination {
+  bottom: 10px;
+  z-index: 20;
+}
+
+/* Contenedor principal — ocultar lo que se desborde */
+.swiper {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* Wrapper — fila horizontal de slides */
+.swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  transition-property: transform;
+  will-change: transform;
+}
+
+/* Cada slide ocupa exactamente el 100% del ancho */
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Dots de paginacion */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  transition:
+    width 0.3s ease,
+    background 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  width: 20px;
+  background: white;
 }

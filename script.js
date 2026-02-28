@@ -364,7 +364,7 @@ function initFeatureShuffler() {
   });
 }
 
-// DOM
+// DOM — setup que no depende de librerías externas
 document.addEventListener('DOMContentLoaded', () => {
   setupNavbar();
   setupMobileMenu();
@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupScrollTop();
   initFeatureShuffler();
 
-  // GSAP
+  // GSAP — opcional, mejora la experiencia si carga
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
     animateHero();
@@ -383,3 +383,39 @@ document.addEventListener('DOMContentLoaded', () => {
     animateMap();
   }
 });
+
+// Swiper viene del CDN y puede llegar despues de DOMContentLoaded
+window.addEventListener('load', () => {
+  initSwipers();
+});
+
+// SWIPERS — Carrusel de imagenes en cards de proyectos
+function initSwipers() {
+  if (typeof Swiper === 'undefined') {
+    console.warn('Swiper no disponible — reintentando en 500ms');
+    setTimeout(initSwipers, 500);
+    return;
+  }
+
+  var config = {
+    loop: true,
+    speed: 350,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    grabCursor: true,
+    threshold: 10,
+    touchAngle: 45,
+    keyboard: { enabled: true },
+  };
+
+  new Swiper('.swiper-maitenes', config);
+  new Swiper('.swiper-quillayes', config);
+  new Swiper('.swiper-mahuida', config);
+}
