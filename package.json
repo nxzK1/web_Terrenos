@@ -1,0 +1,16 @@
+{
+  "name": "terrenos-sebastian-valdes",
+  "version": "1.0.0",
+  "description": "Landing page profesional — Venta de terrenos en la playa, 5ta Región de Chile.",
+  "private": true,
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/styles.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/styles.css --minify",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.4",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38"
+  }
+}

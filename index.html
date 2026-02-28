@@ -1,320 +1,1213 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Venta de terrenos en la Playa - Tu sueño, mas cerca de ti.</title>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Terrenos en la playa en la 5ta Región de Chile. Proyectos Fundo Los Maitenes, Los Quillayes y Mahuida. Escritura individual, factibilidad eléctrica y caminos estabilizados."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Terrenos Sebastián Valdés" />
+    <meta
+      property="og:title"
+      content="Terrenos Sebastián Valdés — Tu sueño, más cerca del mar"
+    />
+    <meta
+      property="og:description"
+      content="Venta de terrenos en la playa. 5ta Región de Chile."
+    />
+    <meta property="og:type" content="website" />
+    <title>Terrenos Sebastián Valdés — Tu sueño, más cerca de ti</title>
+
+    <!-- preconexiones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fuentes: -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- AOS -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-        body { font-family: 'Poppins', sans-serif; }
-    </style>
-</head>
-<body class="bg-gradient-to-br from-blue-50 to-green-50 text-gray-800">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              verde: '#10B981',
+              'verde-dark': '#059669',
+              arena: '#F59E0B',
+              'arena-dark': '#D97706',
+              cielo: '#0EA5E9',
+              oscuro: '#1E293B',
+              cream: '#F8F6F1',
+              rojo: '#cc1c16',
+              amarillo: '#f3ef08',
+              aqua: '#1ccc91',
+              morado: '#650fb6',
+              rosado: '#d417d4',
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              serif: ['"Cormorant Garamond"', 'serif'],
+            },
+          },
+        },
+      };
+    </script>
 
-    <!-- Header/Nav -->
-<nav id="navbar" class="navbar fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-lg z-50 transition-all duration-300 overflow-hidden">
-    <div class="w-full px-3 sm:px-6 lg:px-8">
-        <div class="max-w-[100vw] mx-auto flex justify-between items-center py-3 sm:py-4 h-auto">
-            <!-- Logo -->
-            <div class="text-m sm:text-sm lg:text-base font-bold bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent min-w-0 truncate leading-tight max-w-[40%]">
-                <span class="block sm:hidden">Terrenos S. Valdés</span>
-                <span class="hidden sm:inline">Terrenos Sebastian Valdés</span>
-            </div>
-            
-            <!-- Menú desktop -->
-            <div class="hidden lg:flex space-x-6 items-center flex-shrink-0">
-                <a href="#inicio" class="hover:text-green-500 transition-colors font-medium">Inicio</a>
-                <a href="#terrenos" class="hover:text-green-500 transition-colors font-medium">Terrenos</a>
-                <a href="#nosotros" class="hover:text-green-500 transition-colors font-medium">Nosotros</a>
-                <a href="#contacto" class="hover:text-green-500 transition-colors font-medium">Contacto</a>
-            </div>
-            
-            <!-- WhatsApp desktop -->
-            <a href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20saber%20más%20sobre%20los%20terrenos%20en%20la%20playa." 
-               class="hidden md:inline-flex items-center gap-2 bg-green-500 text-white px-3 py-2 rounded-full font-semibold 
-                      hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 text-sm flex-shrink-0 ml-2">
-                <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
-            </a>
-            
-            <!-- Hamburguesa -->
-            <button id="menu-toggle" class="lg:hidden p-1.5 rounded hover:bg-gray-100 transition-colors ml-1 flex-shrink-0">
-                <i class="fas fa-bars text-xl text-slate-800"></i>
-            </button>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dist/styles.css">
+  </head>
+  <body class="bg-cream text-oscuro overflow-x-hidden">
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <nav
+      id="navbar"
+      class="navbar fixed top-0 left-0 right-0 z-50 flex justify-center pt-5 px-4 transition-all duration-500"
+    >
+      <div
+        class="navbar-inner flex items-center justify-between w-full max-w-5xl px-6 py-3 rounded-full transition-all duration-500"
+      >
+        <!-- Marca -->
+        <a
+          href="#inicio"
+          class="navbar-brand text-sm font-extrabold tracking-wide uppercase whitespace-nowrap"
+        >
+          Terrenos S. Valdés
+        </a>
+
+        <!-- enlaces directos -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a
+            href="#inicio"
+            class="nav-link text-sm font-medium tracking-wide transition-colors duration-300"
+            >Inicio</a
+          >
+          <a
+            href="#terrenos"
+            class="nav-link text-sm font-medium tracking-wide transition-colors duration-300"
+            >Proyectos</a
+          >
+          <a
+            href="#nosotros"
+            class="nav-link text-sm font-medium tracking-wide transition-colors duration-300"
+            >Nosotros</a
+          >
+          <a
+            href="#contacto"
+            class="nav-link text-sm font-medium tracking-wide transition-colors duration-300"
+            >Contacto</a
+          >
         </div>
+
+        <!-- CTA + Hamburguesa -->
+        <div class="flex items-center gap-3">
+          <a
+            href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20saber%20más%20sobre%20los%20terrenos%20en%20la%20playa."
+            rel="noopener noreferrer"
+            target="_blank"
+            class="hidden md:inline-flex items-center gap-2 bg-verde text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-verde-dark transition-all duration-300 magnetic-btn shadow-md"
+          >
+            <i class="fab fa-whatsapp"></i>
+            <span>Consultar</span>
+          </a>
+          <button
+            id="menu-toggle"
+            class="lg:hidden flex flex-col justify-center items-center w-9 h-9 rounded-full transition-colors"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+          >
+            <span
+              class="ham-bar block w-5 h-0.5 bg-current mb-1.5 transition-all duration-300 origin-center"
+            ></span>
+            <span
+              class="ham-bar block w-5 h-0.5 bg-current mb-1.5 transition-all duration-300"
+            ></span>
+            <span
+              class="ham-bar block w-3.5 h-0.5 bg-current transition-all duration-300 origin-center self-end"
+            ></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu Movil -->
+      <div
+        id="mobile-menu"
+        class="mobile-menu hidden absolute top-full left-4 right-4 mt-3 rounded-3xl overflow-hidden shadow-2xl"
+      >
+        <div class="bg-white/95 backdrop-blur-xl p-5 space-y-1">
+          <a
+            href="#inicio"
+            class="mobile-link block px-4 py-3 rounded-2xl text-oscuro text-sm font-medium hover:bg-verde/10 hover:text-verde transition-colors"
+            >Inicio</a
+          >
+          <a
+            href="#terrenos"
+            class="mobile-link block px-4 py-3 rounded-2xl text-oscuro text-sm font-medium hover:bg-verde/10 hover:text-verde transition-colors"
+            >Proyectos</a
+          >
+          <a
+            href="#nosotros"
+            class="mobile-link block px-4 py-3 rounded-2xl text-oscuro text-sm font-medium hover:bg-verde/10 hover:text-verde transition-colors"
+            >Nosotros</a
+          >
+          <a
+            href="#contacto"
+            class="mobile-link block px-4 py-3 rounded-2xl text-oscuro text-sm font-medium hover:bg-verde/10 hover:text-verde transition-colors"
+            >Contacto</a
+          >
+          <a
+            href="https://wa.me/56912345678?text=Hola%20Sebastián,%20desde%20menú%20móvil"
+            rel="noopener noreferrer"
+            target="_blank"
+            class="flex items-center justify-center gap-2 w-full px-4 py-4 mt-2 bg-verde text-white rounded-2xl text-sm font-semibold shadow-lg hover:bg-verde-dark transition-all"
+          >
+            <i class="fab fa-whatsapp text-base"></i>WhatsApp Sebastián
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section
+      id="inicio"
+      class="hero-section relative min-h-screen flex items-end pb-28 md:pb-32 overflow-hidden"
+    >
+      <!-- Background -->
+      <div class="hero-bg absolute inset-0">
+        <img
+          src="img/Playa-pichicuy.jpg"
+          onerror="
+            this.src =
+              'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80'
+          "
+          alt="Playa en la quinta región de Chile"
+          class="w-full h-full object-cover"
+        />
+        <div class="hero-overlay absolute inset-0"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 px-6 md:px-14 lg:px-24 max-w-6xl w-full">
+        <!-- Eyebrow -->
+        <div class="hero-eyebrow gsap-init flex items-center gap-3 mb-6">
+          <div class="w-10 h-px bg-arena"></div>
+          <span class="text-arena text-xs font-bold tracking-[0.35em] uppercase"
+            >5ta Región · Chile</span
+          >
+        </div>
+
+        <!-- Headline -->
+        <div class="mb-4 overflow-hidden">
+          <h1
+            class="hero-line-1 gsap-init text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white leading-none"
+          >
+            Tu terreno
+          </h1>
+        </div>
+        <div class="overflow-hidden">
+          <h1
+            class="hero-line-2 gsap-init font-serif italic text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-arena leading-none"
+          >
+            en la playa.
+          </h1>
+        </div>
+
+        <!-- Subtitulo -->
+        <p
+          class="hero-sub gsap-init text-white/65 text-base md:text-lg max-w-md mt-8 leading-relaxed font-light"
+        >
+          Proyectos con escritura individual, factibilidad eléctrica y caminos
+          estabilizados. A minutos del mar.
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero-ctas gsap-init flex flex-wrap gap-4 mt-10">
+          <a
+            href="#terrenos"
+            class="magnetic-btn inline-flex items-center gap-2 bg-verde text-white px-8 py-4 rounded-full text-sm font-bold hover:bg-verde-dark transition-all duration-300 shadow-xl shadow-verde/30"
+          >
+            Ver Proyectos
+            <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+          <a
+            href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20saber%20más%20sobre%20los%20terrenos%20en%20la%20playa."
+            rel="noopener noreferrer"
+            target="_blank"
+            class="magnetic-btn inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white border border-white/25 px-8 py-4 rounded-full text-sm font-bold hover:bg-white/20 transition-all duration-300"
+          >
+            <i class="fab fa-whatsapp"></i>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Desplazamientos -->
+      <div
+        class="hero-scroll gsap-init absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+      >
+        <span
+          class="text-white/40 text-xs tracking-[0.25em] uppercase font-medium"
+          >Desplazate hacia abajo</span
+        >
+        <div
+          class="w-px h-10 bg-white/20 relative overflow-hidden rounded-full"
+        >
+          <div
+            class="scroll-dot absolute top-0 left-0 w-full bg-arena rounded-full"
+            style="height: 40%"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="bg-oscuro py-10 px-6 overflow-hidden">
+      <div
+        class="max-w-4xl mx-auto flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-0"
+      >
+        <div class="stat-item text-center">
+          <div class="text-3xl font-extrabold text-verde">
+            <span data-count="10">0</span>+
+          </div>
+          <div class="text-xs text-white/40 font-medium mt-1 tracking-wide">
+            Familias Felices
+          </div>
+        </div>
+        <div class="hidden md:block w-px h-10 bg-white/10"></div>
+        <div class="stat-item text-center">
+          <div class="text-3xl font-extrabold text-arena">
+            <span data-count="2">0</span>+
+          </div>
+          <div class="text-xs text-white/40 font-medium mt-1 tracking-wide">
+            Años de Experiencia
+          </div>
+        </div>
+        <div class="hidden md:block w-px h-10 bg-white/10"></div>
+        <div class="stat-item text-center">
+          <div class="text-3xl font-extrabold text-cielo">
+            <span data-count="3">0</span>
+          </div>
+          <div class="text-xs text-white/40 font-medium mt-1 tracking-wide">
+            Proyectos Activos
+          </div>
+        </div>
+        <div class="hidden md:block w-px h-10 bg-white/10"></div>
+        <div class="stat-item text-center">
+          <div class="text-3xl font-extrabold text-white">100%</div>
+          <div class="text-xs text-white/40 font-medium mt-1 tracking-wide">
+            Legal y Documentado
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <!-- Menú móvil -->
-    <div id="mobile-menu" class="lg:hidden bg-white/95 backdrop-blur-md shadow-2xl border-t border-gray-200 hidden">
-        <div class="px-4 py-4 space-y-2">
-            <a href="#inicio" class="block px-4 py-3 rounded-lg hover:text-green-500 hover:bg-green-50 transition-all w-full">Inicio</a>
-            <a href="#terrenos" class="block px-4 py-3 rounded-lg hover:text-green-500 hover:bg-green-50 transition-all w-full">Terrenos</a>
-            <a href="#nosotros" class="block px-4 py-3 rounded-lg hover:text-green-500 hover:bg-green-50 transition-all w-full">Nosotros</a>
-            <a href="#contacto" class="block px-4 py-3 rounded-lg hover:text-green-500 hover:bg-green-50 transition-all w-full">Contacto</a>
-            <a href="https://wa.me/56912345678?text=Hola%20Sebastian,%20desde%20menú%20móvil" 
-               class="block w-full px-4 py-4 mt-4 bg-green-500 text-white rounded-xl text-center font-semibold shadow-lg 
-                      hover:bg-green-600 hover:shadow-xl transition-all">
-                <i class="fab fa-whatsapp mr-2"></i>WhatsApp Sebastian</a>
-        </div>
-    </div>  
-</nav>
 
-    <!-- Hero -->
-    <section id="inicio" class="min-h-screen bg-cover bg-center flex items-center justify-center text-white" 
-            style="background-image: url('img/Playa-pichicuy.jpg');">
-        <div class="text-center px-4 max-w-4xl mx-auto" data-aos="fade-up">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 drop-shadow-2xl">Terrenos en la Playa</h1>
-            <p class="text-xl md:text-2xl mb-8 drop-shadow-lg">Tu primer terreno en la playa, más cerca de lo que imaginas.</p>
-            <a href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20saber%20más%20sobre%20los%20terrenos%20en%20la%20playa." 
-               class="inline-block bg-green-500 text-white px-10 py-4 rounded-full text-xl font-semibold shadow-2xl hover:bg-green-600 hover:scale-105 transition-all duration-300">
-                <i class="fab fa-whatsapp mr-3"></i>Contactar Ahora
+    <!-- PROYECTOS — Dashboard Interactivo de Micro-UI -->
+    <section id="terrenos" class="py-32 px-6 bg-cream overflow-hidden">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="mb-20">
+          <div class="projects-label flex items-center gap-4 mb-4">
+            <div class="w-8 h-px bg-verde"></div>
+            <span
+              class="text-verde text-xs font-bold tracking-[0.35em] uppercase"
+              >Proyectos Disponibles</span
+            >
+          </div>
+          <h2
+            class="projects-title text-4xl md:text-6xl font-extrabold text-oscuro leading-tight"
+          >
+            Elige tu<br />
+            <em class="font-serif font-normal italic text-verde"
+              >lugar cerca al mar.</em
+            >
+          </h2>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
+          <!-- CARD 1 -->
+          <div
+            class="project-card bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500"
+          >
+            <div class="relative h-56 overflow-hidden">
+              <img
+                src="img/card-maitenes.jpg"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80'
+                "
+                alt="Fundo Los Maitenes"
+                class="card-img w-full h-full object-cover transition-transform duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-oscuro/60 to-transparent"
+              ></div>
+              <div class="absolute top-4 left-4">
+                <span
+                  class="bg-verde/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full"
+                  >¡a Solo 8 minutos de la playa!</span
+                >
+              </div>
+            </div>
+
+            <div class="p-7">
+              <p
+                class="text-xs text-verde font-bold tracking-widest uppercase mb-1"
+              >
+                Los Maitenes
+              </p>
+              <h3 class="text-xl font-bold text-oscuro mb-1">
+                Fundo Los Maitenes
+              </h3>
+              <p class="text-2xl font-extrabold text-verde mb-5">
+                desde $4.500.000
+              </p>
+
+              <!-- Feature Shuffler -->
+              <div
+                class="feature-shuffler relative h-[130px] overflow-hidden mb-6"
+                style="
+                  mask-image: linear-gradient(
+                    to bottom,
+                    black 0%,
+                    black 65%,
+                    transparent 100%
+                  );
+                  -webkit-mask-image: linear-gradient(
+                    to bottom,
+                    black 0%,
+                    black 65%,
+                    transparent 100%
+                  );
+                "
+              >
+                <div id="shuffler-track" class="flex flex-col gap-2">
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-verde flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Sitios desde 500 m²</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-cielo flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Factibilidad eléctrica</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-arena flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Agua por camion aljibe</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-verde flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Escritura individual (SPA)</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-red-500 flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Factibilidad de internet por fibra óptica</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-yellow-500 flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Acceso privado</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-cyan-500 flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Portón automatizado</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-purple-500 flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Caminos estabilizados</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-cyan-500 flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Camaras de seguridad</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="https://wa.me/56912345678?text=Hola,%20quiero%20más%20información%20del%20Fundo%20los%20Maitenes."
+                rel="noopener noreferrer"
+                target="_blank"
+                class="magnetic-btn w-full block bg-oscuro text-white py-3.5 rounded-2xl text-center text-sm font-bold hover:bg-verde transition-all duration-300"
+              >
+                <i class="fab fa-whatsapp mr-2"></i>Consultar
+              </a>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div
+            class="project-card bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500"
+          >
+            <div class="relative h-56 overflow-hidden">
+              <img
+                src="img/card-quillayes.jpeg"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80'
+                "
+                alt="Fundo Los Quillayes"
+                class="card-img w-full h-full object-cover transition-transform duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-oscuro/60 to-transparent"
+              ></div>
+              <div class="absolute top-4 left-4">
+                <span
+                  class="bg-verde/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full"
+                  >¡a Solo 12 minutos de la playa!</span
+                >
+              </div>
+            </div>
+
+            <div class="p-7">
+              <p
+                class="text-xs text-verde font-bold tracking-widest uppercase mb-1"
+              >
+                Los Quillayes
+              </p>
+              <h3 class="text-xl font-bold text-oscuro mb-1">
+                Fundo Los Quillayes
+              </h3>
+              <p class="text-2xl font-extrabold text-verde mb-5">
+                desde $2.000.000
+              </p>
+
+              <!-- Feature Shuffler -->
+              <div
+                class="feature-shuffler relative h-[130px] overflow-hidden mb-6"
+                style="
+                  mask-image: linear-gradient(
+                    to bottom,
+                    black 0%,
+                    black 65%,
+                    transparent 100%
+                  );
+                  -webkit-mask-image: linear-gradient(
+                    to bottom,
+                    black 0%,
+                    black 65%,
+                    transparent 100%
+                  );
+                "
+              >
+                <div id="shuffler-track" class="flex flex-col gap-2">
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-verde flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Sitios desde 500 m²</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-cielo flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Factibilidad de Luz.</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-arena flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Agua por camión aljibe</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-verde flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Escritura individual (SPA)</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-red-500 flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Factibilidad de internet por fibra óptica</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-yellow-500 flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Acceso privado</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-cyan-500 flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Portón automatizado</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-purple-500 flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Caminos estabilizados</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="https://wa.me/56912345678?text=Hola,%20quiero%20más%20información%20del%20Fundo%20los%20Quillayes."
+                rel="noopener noreferrer"
+                target="_blank"
+                class="magnetic-btn w-full block bg-oscuro text-white py-3.5 rounded-2xl text-center text-sm font-bold hover:bg-verde transition-all duration-300"
+              >
+                <i class="fab fa-whatsapp mr-2"></i>Consultar
+              </a>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div
+            class="project-card bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500"
+          >
+            <div class="relative h-56 overflow-hidden">
+              <img
+                src="img/card-mahuida.jpg"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80'
+                "
+                alt="Proyecto Mahuida"
+                class="card-img w-full h-full object-cover transition-transform duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-oscuro/60 to-transparent"
+              ></div>
+              <div class="absolute top-4 left-4">
+                <span
+                  class="bg-verde/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full"
+                  >¡a Solo 12 minutos de la playa!</span
+                >
+              </div>
+            </div>
+
+            <div class="p-7">
+              <p
+                class="text-xs text-verde font-bold tracking-widest uppercase mb-1"
+              >
+                Mahuida
+              </p>
+              <h3 class="text-xl font-bold text-oscuro mb-1">
+                Proyecto Mahuida
+              </h3>
+              <p class="text-2xl font-extrabold text-verde mb-5">
+                desde $4.500.000
+              </p>
+
+              <!-- Feature Shuffler -->
+              <div
+                class="feature-shuffler relative h-[130px] overflow-hidden mb-6"
+                style="
+                  mask-image: linear-gradient(
+                    to bottom,
+                    black 0%,
+                    black 65%,
+                    transparent 100%
+                  );
+                  -webkit-mask-image: linear-gradient(
+                    to bottom,
+                    black 0%,
+                    black 65%,
+                    transparent 100%
+                  );
+                "
+              >
+                <div id="shuffler-track" class="flex flex-col gap-2">
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-verde flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Sitios desde 500 m²</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-cielo flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Factibilidad de Luz.</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-arena flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Agua por camión aljibe</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-verde flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Escritura individual (SPA)</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-red-500 flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Factibilidad de internet por fibra óptica</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-yellow-500 flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Acceso privado</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-cyan-500 flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Portón automatizado</span
+                    >
+                  </div>
+                  <div
+                    class="feature-chip flex items-center gap-2.5 bg-cream border border-oscuro/8 rounded-xl px-4 py-2.5"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-purple-500 flex-shrink-0"
+                    ></span>
+                    <span class="text-sm font-medium text-oscuro"
+                      >Caminos estabilizados</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="https://wa.me/56912345678?text=Hola,%20quiero%20más%20información%20del%20proyecto%20Mahuida."
+                rel="noopener noreferrer"
+                target="_blank"
+                class="magnetic-btn w-full block bg-oscuro text-white py-3.5 rounded-2xl text-center text-sm font-bold hover:bg-verde transition-all duration-300"
+              >
+                <i class="fab fa-whatsapp mr-2"></i>Consultar
+              </a>
+            </div>
+          </div>
+    </section>
+
+    <!-- FILOSOFÍA -->
+    <section
+      class="philosophy-section relative py-36 md:py-52 px-6 overflow-hidden"
+    >
+      <!-- Background image -->
+      <div class="philosophy-bg absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80"
+          alt="Playa hermosa en Chile"
+          id="parallax-img"
+          class="w-full h-full object-cover scale-110"
+        />
+        <div
+          class="absolute inset-0"
+          style="
+            background: linear-gradient(
+              to bottom,
+              rgba(30, 41, 59, 0.9) 0%,
+              rgba(30, 41, 59, 0.82) 100%
+            );
+          "
+        ></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
+        <div class="phil-eyebrow flex items-center justify-center gap-5 mb-14">
+          <div class="w-16 h-px bg-arena/40"></div>
+          <span
+            class="text-arena/70 text-xs font-bold tracking-[0.45em] uppercase"
+            >Nuestra Filosofía</span
+          >
+          <div class="w-16 h-px bg-arena/40"></div>
+        </div>
+
+        <div
+          class="phil-q1 text-white/40 text-2xl md:text-3xl lg:text-4xl font-light leading-tight mb-4"
+        >
+          El mercado pregunta:<br />
+          <em class="font-serif italic text-white/30"
+            >"¿Cuánto tienes para gastar?"</em
+          >
+        </div>
+
+        <div class="phil-divider w-px h-16 bg-arena/30 mx-auto my-8"></div>
+
+        <div
+          class="phil-q2 text-white text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight"
+        >
+          Nosotros preguntamos:<br />
+          <em class="font-serif italic font-normal text-arena"
+            >¿Cuál es tu sueño?</em
+          >
+        </div>
+
+        <p
+          class="phil-body text-white/55 text-base md:text-lg mt-10 max-w-xl mx-auto font-light leading-relaxed"
+        >
+          Cada familia merece su lugar cerca del mar. Trabajamos con
+          transparencia total, documentación impecable y precios que hacen
+          posible el sueño.
+        </p>
+
+        <div class="phil-cta mt-12">
+          <a
+            href="https://wa.me/56912345678?text=Hola,%20quiero%20cumplir%20mi%20sueño%20de%20tener%20un%20terreno%20en%20la%20playa."
+            rel="noopener noreferrer"
+            target="_blank"
+            class="magnetic-btn inline-flex items-center gap-3 bg-verde text-white px-9 py-4 rounded-full font-bold text-sm hover:bg-verde-dark transition-all duration-300 shadow-2xl shadow-verde/30"
+          >
+            <i class="fab fa-whatsapp text-base"></i>
+            Empezar ahora
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="py-32 px-6 bg-cream overflow-hidden">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Portrait -->
+          <div class="nosotros-img">
+            <div class="relative">
+              <img
+                src="img/user.jpg"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80'
+                "
+                alt="Sebastián Valdés — Terrenos en la playa"
+                class="w-full h-[480px] object-cover object-top rounded-[2rem] shadow-2xl"
+              />
+              <!-- Badge -->
+              <div
+                class="absolute -bottom-5 -right-5 bg-verde text-white p-6 rounded-[1.5rem] shadow-xl"
+              >
+                <div class="text-3xl font-extrabold leading-none">2+</div>
+                <div class="text-xs font-medium opacity-80 mt-1 leading-tight">
+                  años de<br />experiencia
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="nosotros-content">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-8 h-px bg-verde"></div>
+              <span
+                class="text-verde text-xs font-bold tracking-[0.3em] uppercase"
+                >Sobre mí</span
+              >
+            </div>
+
+            <h2
+              class="text-4xl md:text-5xl font-extrabold text-oscuro leading-none mb-2"
+            >
+              Sebastián
+            </h2>
+            <h2
+              class="text-4xl md:text-5xl font-serif italic font-normal text-verde mb-6"
+            >
+              Valdés.
+            </h2>
+
+            <p class="text-oscuro/60 text-base leading-relaxed mb-10">
+              Llevo más de 2 años conectando familias chilenas con su sueño de
+              tener un terreno cerca de la playa en la 5ta Región. Cada venta es
+              un compromiso de transparencia, documentación al día y trato
+              personalizado.
+            </p>
+
+            <!-- Info -->
+            <div class="space-y-3 mb-10">
+              <div
+                class="trust-pill flex items-start gap-4 bg-white p-5 rounded-2xl border border-oscuro/5 shadow-sm"
+              >
+                <div
+                  class="w-10 h-10 bg-verde/10 rounded-xl flex items-center justify-center shrink-0"
+                >
+                  <i class="fas fa-shield-alt text-verde text-sm"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-sm text-oscuro mb-0.5">
+                    Seguridad Jurídica Total
+                  </div>
+                  <div class="text-xs text-oscuro/50">
+                    Escrituras saneadas, sin deudas ni gravámenes.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="trust-pill flex items-start gap-4 bg-white p-5 rounded-2xl border border-oscuro/5 shadow-sm"
+              >
+                <div
+                  class="w-10 h-10 bg-cielo/10 rounded-xl flex items-center justify-center shrink-0"
+                >
+                  <i class="fas fa-bolt text-cielo text-sm"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-sm text-oscuro mb-0.5">
+                    Factibilidades Confirmadas
+                  </div>
+                  <div class="text-xs text-oscuro/50">
+                    Electricidad, agua y fibra óptica gestionadas.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="trust-pill flex items-start gap-4 bg-white p-5 rounded-2xl border border-oscuro/5 shadow-sm"
+              >
+                <div
+                  class="w-10 h-10 bg-arena/10 rounded-xl flex items-center justify-center shrink-0"
+                >
+                  <i class="fas fa-handshake text-arena text-sm"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-sm text-oscuro mb-0.5">
+                    Trato Directo y Transparente
+                  </div>
+                  <div class="text-xs text-oscuro/50">
+                    Sin intermediarios. Directo con el vendedor.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="https://wa.me/56912345678?text=Hola%20Sebastián,%20quiero%20conocer%20los%20proyectos."
+              rel="noopener noreferrer"
+              target="_blank"
+              class="magnetic-btn inline-flex items-center gap-3 bg-verde text-white px-8 py-4 rounded-full font-bold text-sm hover:bg-verde-dark transition-all duration-300 shadow-lg shadow-verde/20"
+            >
+              <i class="fab fa-whatsapp text-base"></i>
+              Hablar con Sebastián
             </a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Terrenos -->
-    <section id="terrenos" class="py-24 px-4 max-w-6xl mx-auto">
-        <div class="text-center mb-20" data-aos="zoom-in">
-            <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent mb-6">Proyectos Disponibles</h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Selecciona el tuyo y empieza a soñar con tu casa cerca al mar.</p>
+    <!-- UBICACIÓN -->
+    <section class="py-20 px-6 bg-white overflow-hidden">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="flex items-center justify-center gap-4 mb-3">
+            <div class="w-8 h-px bg-verde"></div>
+            <span
+              class="text-verde text-xs font-bold tracking-[0.3em] uppercase"
+              >Ubicación</span
+            >
+            <div class="w-8 h-px bg-verde"></div>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-oscuro">
+            Cerca del
+            <em class="font-serif italic font-normal text-verde">mar.</em>
+          </h2>
+          <p class="text-oscuro/50 mt-3 text-sm">
+            Sector Pichicuy · Huaquén, Ruta 5 Norte, Km 170
+          </p>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Cards -->
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                <img src="img/card-maitenes.jpg" alt="Proyecto Maitenes" class="w-full h-64 object-cover max-w-full">
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold mb-2">Proyecto Fundo los Maitenes</h3>
-                    <p class="text-3xl font-bold text-green-500 mb-4">desde $4.500.000</p>
-                    <ul class="text-gray-600 space-y-1 mb-6">
-                        <li>Sitios desde 500 m² aprox.</li>
-                        <li>Factibilidad eléctrica.</li>
-                        <li>Agua por camión aljibe.</li>
-                        <li>Escritura individual (SPA).</li>
-                        <li>Factibilidad de internet por Fibra Óptica.</li>
-                        <li>Portón automatizado.</li>
-                        <li>Camaras de seguridad.</li>
-                    </ul>
-                    <a href="https://wa.me/56912345678?text=Hola,%20quiero%20mas%20información%20del%20proyecto%20los%20Maitenes." 
-                       class="w-full block bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-xl text-center font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300">
-                        <i class="fab fa-whatsapp mr-2"></i>Consultar
-                    </a>
-                </div>
-            </div>
 
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                <img src="img/card-quillayes.jpeg" alt="Proyecto Quillayes" class="w-full h-64 object-cover max-w-full">
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold mb-2">Proyecto Fundo los Quillayes</h3>
-                    <p class="text-3xl font-bold text-green-500 mb-4">desde $3.900.000</p>
-                    <ul class="text-gray-600 space-y-1 mb-6">
-                        <li>Sitios desde 500 m² aprox.</li>
-                        <li>Factibilidad eléctrica.</li>
-                        <li>Agua por camión aljibe.</li>
-                        <li>Escritura individual (SPA).</li>
-                        <li>Factibilidad de internet por Fibra Óptica.</li>
-                        <li>Caminos estabilizados.</li>
-                        <li>Terrenos planos y semi-planos.</li>
-                    </ul>
-                    <a href="https://wa.me/56912345678?text=Hola,%20quiero%20mas%20información%20del%20proyecto%20Fundo%20Los%20Quillayes." 
-                       class="w-full block bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-xl text-center font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300">
-                        <i class="fab fa-whatsapp mr-2"></i>Consultar
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                <img src="img/card-mahuida.jpg" alt="Proyecto Mahuida" class="w-full h-64 object-cover max-w-full">
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold mb-2">Proyecto Mahuida</h3>
-                    <p class="text-3xl font-bold text-green-500 mb-4">desde $4.500.000</p>
-                    <ul class="text-gray-600 space-y-1 mb-6">
-                        <li>Sitios desde 500 m² aprox.</li>
-                        <li>Factibilidad eléctrica.</li>
-                        <li>Agua por camión aljibe.</li>
-                        <li>Escritura individual (SPA).</li>
-                        <li>Factibilidad de internet por Fibra Óptica.</li>
-                        <li>Caminos estabilizados.</li>
-                        <li>Terrenos planos y semi-planos.</li>
-                        <li>Ruta 5 Norte, Km 170.</li>
-                    </ul>
-                    <a href="https://wa.me/56912345678?text=Hola,%20quiero%20mas%20información%20del%20proyecto%20Mahuida." 
-                       class="w-full block bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-xl text-center font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300">
-                        <i class="fab fa-whatsapp mr-2"></i>Consultar
-                    </a>
-                </div>
-            </div>
+        <div
+          class="map-wrap rounded-[2rem] overflow-hidden shadow-2xl border border-oscuro/5"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3370.4452266913513!2d-71.4212417!3d-32.3535999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x968909329fa340a3%3A0xfb8164b4339275bb!2sHuaqu%C3%A9n%20ruta%20E-251%20km%20170%20ruta%205%20norte!5e0!3m2!1ses-419!2scl!4v1771976207213!5m2!1ses-419!2scl"
+            width="100%"
+            height="500"
+            style="border: 0; display: block"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación referencial de los proyectos de terrenos"
+          ></iframe>
         </div>
+      </div>
     </section>
 
-    <!-- Nosotros -->
-    <section id="nosotros" class="py-24 px-4 bg-gradient-to-br from-blue-50 to-green-50">
-        <div class="max-w-6xl mx-auto">
-            <!-- Título -->
-            <div class="text-center mb-20" data-aos="zoom-in">
-                <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent mb-6">
-                    Quienes somos.
-                </h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Mas de 2 años vendiendo terrenos en la 5ta región de Chile, ayudando a familias a cumplir su sueño de tener una casa mas cerca de la playa.
-                </p>
+    <!-- FOOTER -->
+    <footer
+      id="contacto"
+      class="bg-oscuro rounded-t-[3rem] pt-20 pb-10 px-6 overflow-hidden"
+    >
+      <div class="max-w-5xl mx-auto">
+        <!-- Grid -->
+        <div class="grid md:grid-cols-3 gap-12 mb-16">
+          <!-- Brand -->
+          <div>
+            <div class="text-base font-extrabold text-white mb-3 tracking-wide">
+              Terrenos Sebastián Valdés
             </div>
-
-            <!-- Contenido -->
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Foto de tu hermano/equipo -->
-                <div data-aos="fade-right">
-                    <img src="img/user.jpg" alt="Insertar imagen" 
-                         class="w-full h-96 object-cover rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500">
-                </div>
-
-                <!-- Texto -->
-                <div data-aos="fade-left" data-aos-delay="200">
-                    <h3 class="text-3xl font-bold mb-6 text-gray-800">Sebastian Valdés</h3>
-                    <div class="space-y-6 mb-8">
-                        <div>
-                            <div class="text-2xl font-bold text-green-500 mb-2">+2 años de experiencia</div>
-                            <p class="text-gray-600">Vendiendo terrenos cerca de las playas de la 5ta región de Chile.</p>
-                        </div>
-                        <div>
-                            <div class="text-2xl font-bold text-green-500 mb-2">+10 familias felices</div>
-                            <p class="text-gray-600">Clientes que hoy disfrutan su casa cerca al mar.</p>
-                        </div>
-                        <div>
-                            <div class="text-2xl font-bold text-green-500 mb-2">Garantía total</div>
-                            <p class="text-gray-600">Documentación al día, sin deudas ni problemas legales.</p>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300">
-                            <i class="fas fa-shield-alt text-3xl text-green-500 mb-3"></i>
-                            <div class="font-bold text-lg">Seguridad</div>
-                            <div class="text-sm text-gray-600">100% legal</div>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300">
-                            <i class="fas fa-clock text-3xl text-blue-500 mb-3"></i>
-                            <div class="font-bold text-lg">Rapidez</div>
-                            <div class="text-sm text-gray-600">Entrega inmediata</div>
-                        </div>
-                    </div>
-                </div>
+            <p class="text-white/35 text-sm leading-relaxed">
+              Venta de terrenos en la 5ta Región de Chile. Tu primer paso hacia
+              tu casa en la playa.
+            </p>
+            <div class="flex items-center gap-2 mt-6">
+              <div class="w-2 h-2 rounded-full bg-verde animate-pulse"></div>
+              <span class="text-verde/70 text-xs font-mono tracking-wide"
+                >Disponible ahora</span
+              >
             </div>
-        </div>
-    </section>
+          </div>
 
+          <!-- Proyectos -->
+          <div>
+            <p
+              class="text-xs font-bold text-white/25 tracking-[0.35em] uppercase mb-5"
+            >
+              Proyectos
+            </p>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#terrenos"
+                  class="text-white/45 text-sm hover:text-verde transition-colors duration-300"
+                  >Fundo Los Maitenes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#terrenos"
+                  class="text-white/45 text-sm hover:text-verde transition-colors duration-300"
+                  >Fundo Los Quillayes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#terrenos"
+                  class="text-white/45 text-sm hover:text-verde transition-colors duration-300"
+                  >Proyecto Mahuida</a
+                >
+              </li>
+            </ul>
+          </div>
 
-    <!-- Footer -->
-    <section class="bg-white py-16 px-4">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-3xl font-bold text-center mb-8">Ubicación Referencial</h3>
-            <div class="rounded-2xl overflow-hidden shadow-lg">
-             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3370.4452266913513!2d-71.4212417!3d-32.3535999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x968909329fa340a3%3A0xfb8164b4339275bb!2sHuaqu%C3%A9n%20ruta%20E-251%20km%20170%20ruta%205%20norte!5e0!3m2!1ses-419!2scl!4v1771976207213!5m2!1ses-419!2scl"
-                width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <!-- Contacto -->
+          <div>
+            <p
+              class="text-xs font-bold text-white/25 tracking-[0.35em] uppercase mb-5"
+            >
+              Contacto
+            </p>
+            <div class="space-y-4">
+              <a
+                href="https://wa.me/56912345678"
+                rel="noopener noreferrer"
+                target="_blank"
+                class="flex items-center gap-3 text-white/45 text-sm hover:text-verde transition-colors duration-300"
+              >
+                <i class="fab fa-whatsapp w-4 text-center"></i>
+                +56 9 1234 5678
+              </a>
+              <a
+                href="https://instagram.com/tuusuario"
+                rel="noopener noreferrer"
+                target="_blank"
+                class="flex items-center gap-3 text-white/45 text-sm hover:text-arena transition-colors duration-300"
+              >
+                <i class="fab fa-instagram w-4 text-center"></i>
+                Instagram
+              </a>
+              <a
+                href="https://facebook.com/tuusuario"
+                rel="noopener noreferrer"
+                target="_blank"
+                class="flex items-center gap-3 text-white/45 text-sm hover:text-cielo transition-colors duration-300"
+              >
+                <i class="fab fa-facebook w-4 text-center"></i>
+                Facebook
+              </a>
             </div>
+          </div>
         </div>
-    </section>
 
-    <!-- === REDES SOCIALES PRINCIPAL (PASO 2) === -->
-    <section class="py-12 px-4 bg-gradient-to-br from-green-50 to-teal-50">
-        <div class="max-w-md mx-auto text-center">
-            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-6">Contactame a traves de mis Redes sociales</h3>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <!-- WhatsApp -->
-                <a href="https://wa.me/56912345678?text=Hola%20Sebastian%20quisiera%20mas%20informacion" 
-                   class="flex items-center justify-center gap-3 p-4 bg-green-500 hover:bg-green-600 text-white rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.05] transition-all w-full">
-                    <i class="fab fa-whatsapp text-xl"></i>
-                    <span class="font-semibold text-sm sm:text-base">WhatsApp</span>
-                </a>
-                <!-- Instagram -->
-                <a href="https://instagram.com/tuusuario" 
-                   class="flex items-center justify-center gap-3 p-4 bg-gradient-to-br from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.05] transition-all w-full">
-                    <i class="fab fa-instagram text-xl"></i>
-                    <span class="font-semibold text-sm sm:text-base">Instagram</span>
-                </a>
-                <!-- Facebook -->
-                <a href="https://facebook.com/tuusuario" 
-                   class="flex items-center justify-center gap-3 p-4 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.05] transition-all w-full">
-                    <i class="fab fa-facebook text-xl"></i>
-                    <span class="font-semibold text-sm sm:text-base">Facebook</span>
-                </a>
-            </div>
+        <!-- CTA Final -->
+        <div
+          class="bg-verde/10 border border-verde/20 rounded-[2rem] p-10 mb-14 text-center"
+        >
+          <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3">
+            ¿Listo para dar el primer paso?
+          </h3>
+          <p class="text-white/45 text-sm mb-8 max-w-sm mx-auto">
+            Escríbenos ahora y te asesoramos sin compromiso.
+          </p>
+          <a
+            href="https://wa.me/56912345678?text=Hola%20Sebastián,%20quiero%20saber%20más%20sobre%20los%20terrenos."
+            rel="noopener noreferrer"
+            target="_blank"
+            class="magnetic-btn inline-flex items-center gap-3 bg-verde text-white px-10 py-4 rounded-full font-bold text-base hover:bg-verde-dark transition-all duration-300 shadow-xl shadow-verde/20"
+          >
+            <i class="fab fa-whatsapp text-xl"></i>
+            Escribir a Sebastián
+          </a>
         </div>
-    </section>
 
-
-    <footer id="contacto" class="bg-gray-900 text-white py-12 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <p>&copy; 2026 Terrenos Sebastian Valdés. Todos los derechos reservados.</p>
+        <!-- Bottom bar -->
+        <div
+          class="border-t border-white/8 pt-8 flex flex-col md:flex-row justify-between items-center gap-3"
+        >
+          <p class="text-white/25 text-xs">
+            © 2026 Terrenos Sebastián Valdés. Todos los derechos reservados.
+          </p>
+          <p class="text-white/15 text-xs">
+            5ta Región · Chile · Sector Huaquén
+          </p>
         </div>
+      </div>
     </footer>
-    
-    <!-- AOS JavaScript (OBLIGATORIO ANTES de script.js) -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init({ duration: 1000, once: true });
-    
-    // ===== SMOOTH SCROLL MEJORADO (arregla "Inicio") =====
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const href = this.getAttribute('href');
-                const target = document.querySelector(href);
-                
-                if (target) {
-                    // Compensar altura del navbar fijo (80px aprox)
-                    const navbarHeight = 80;
-                    const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Cerrar menú móvil si está abierto
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    mobileMenu?.classList.add('hidden');
-                }
-            });
-        });
-    });
-    
-    // ===== HAMBURGUESA (tu código que ya funciona) =====
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    menuToggle?.addEventListener('click', () => {
-        mobileMenu?.classList.toggle('hidden');
-    });
-    
-    // Cerrar menú al tocar enlaces
-    mobileMenu?.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu?.classList.add('hidden');
-        });
-    });
-    
-    // Cerrar al tocar fuera
-    document.addEventListener('click', (e) => {
-        if (!mobileMenu?.contains(e.target) && !menuToggle?.contains(e.target)) {
-            mobileMenu?.classList.add('hidden');
-        }
-    });
-</script>
-    
-    <!-- Tu script.js aquí -->
+
+    <!-- FLOATING ELEMENTS -->
+    <!-- WhatsApp Floating CTA -->
+    <a
+      href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20saber%20más%20sobre%20los%20terrenos."
+      rel="noopener noreferrer"
+      target="_blank"
+      class="whatsapp-fab magnetic-btn fixed right-6 bottom-6 z-50 flex items-center gap-2 bg-verde text-white px-5 py-3 rounded-full shadow-2xl shadow-verde/40 hover:bg-verde-dark transition-all duration-300"
+      aria-label="Contactar por WhatsApp"
+    >
+      <i class="fab fa-whatsapp text-xl"></i>
+      <span class="text-sm font-bold">Consultar</span>
+    </a>
+
+    <!-- Volver al Top -->
+    <button
+      id="scroll-top-btn"
+      class="scroll-top-btn fixed right-6 bottom-20 z-50 w-12 h-12 bg-oscuro text-white rounded-full flex items-center justify-center shadow-xl hover:bg-verde transition-all duration-300"
+      aria-label="Volver al inicio"
+    >
+      <i class="fas fa-arrow-up text-sm"></i>
+    </button>
+
+    <!-- SCRIPTS -->
+    <!-- GSAP Core -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- GSAP ScrollTrigger -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      crossorigin="anonymous"
+    ></script>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
