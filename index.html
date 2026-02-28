@@ -40,6 +40,10 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="dist/styles.css">
+
+    <!-- Swiper carousel styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" crossorigin="anonymous">
+
   </head>
   <body class="bg-cream text-oscuro overflow-x-hidden">
     <div class="noise-overlay" aria-hidden="true"></div>
@@ -160,10 +164,6 @@
       <div class="hero-bg absolute inset-0">
         <img
           src="img/Playa-pichicuy.jpg"
-          onerror="
-            this.src =
-              'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80'
-          "
           alt="Playa en la quinta región de Chile"
           class="w-full h-full object-cover"
         />
@@ -307,30 +307,29 @@
           </h2>
         </div>
 
-        <!-- Cards -->
+       <!-- Cards -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
           <!-- CARD 1 -->
           <div
             class="project-card bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500"
           >
             <div class="relative h-56 overflow-hidden">
-              <img
-                src="img/card-maitenes.jpg"
-                onerror="
-                  this.src =
-                    'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80'
-                "
-                alt="Fundo Los Maitenes"
-                class="card-img w-full h-full object-cover transition-transform duration-700"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-oscuro/60 to-transparent"
-              ></div>
-              <div class="absolute top-4 left-4">
-                <span
-                  class="bg-verde/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full"
-                  >¡a Solo 8 minutos de la playa!</span
-                >
+              <!-- Swiper Maitenes -->
+              <div class="swiper swiper-maitenes w-full h-full">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/Maitenes/1-notCompress.png" alt="Fundo Los Maitenes 1 (sinComprimir)" class="w-full h-56 object-cover" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/Maitenes/1-compress.webp" alt="Fundo Los Maitenes 1" class="w-full h-56 object-cover" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/Maitenes/2-compress.webp" alt="Fundo Los Maitenes 2" class="w-full h-56 object-cover" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/Maitenes/3-compress.webp" alt="Fundo Los Maitenes 3" class="w-full h-56 object-cover" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/Maitenes/4-compress.webp" alt="Fundo Los Maitenes 4" class="w-full h-56 object-cover" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/Maitenes/5-compress.webp" alt="Fundo Los Maitenes 5" class="w-full h-56 object-cover" loading="lazy"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-oscuro/60 to-transparent pointer-events-none z-10"></div>
+              <div class="absolute top-4 left-4 z-20">
+                <span class="bg-verde/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full"
+                  >¡a Solo 8 minutos de la playa!</span>
               </div>
             </div>
 
@@ -475,23 +474,21 @@
             class="project-card bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500"
           >
             <div class="relative h-56 overflow-hidden">
-              <img
-                src="img/card-quillayes.jpeg"
-                onerror="
-                  this.src =
-                    'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80'
-                "
-                alt="Fundo Los Quillayes"
-                class="card-img w-full h-full object-cover transition-transform duration-700"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-oscuro/60 to-transparent"
-              ></div>
-              <div class="absolute top-4 left-4">
-                <span
-                  class="bg-verde/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full"
-                  >¡a Solo 12 minutos de la playa!</span
-                >
+              <!-- Swiper Quillayes -->
+              <div class="swiper swiper-quillayes w-full h-full">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/Quillayes/1-compress.webp" alt="Fundo Los Quillayes 1" class="w-full h-56 object-cover" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/Quillayes/2-compress.webp" alt="Fundo Los Quillayes 2" class="w-full h-56 object-cover" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/Quillayes/3-compress.webp" alt="Fundo Los Quillayes 3" class="w-full h-56 object-cover" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/Quillayes/4-compress.webp" alt="Fundo Los Quillayes 4" class="w-full h-56 object-cover" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/Quillayes/5-compress.webp" alt="Fundo Los Quillayes 5" class="w-full h-56 object-cover" loading="lazy"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-oscuro/60 to-transparent pointer-events-none z-10"></div>
+              <div class="absolute top-4 left-4 z-20">
+                <span class="bg-verde/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full"
+                  >¡a Solo 12 minutos de la playa!</span>
               </div>
             </div>
 
@@ -626,23 +623,22 @@
             class="project-card bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500"
           >
             <div class="relative h-56 overflow-hidden">
-              <img
-                src="img/card-mahuida.jpg"
-                onerror="
-                  this.src =
-                    'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80'
-                "
-                alt="Proyecto Mahuida"
-                class="card-img w-full h-full object-cover transition-transform duration-700"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-oscuro/60 to-transparent"
-              ></div>
-              <div class="absolute top-4 left-4">
-                <span
-                  class="bg-verde/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full"
-                  >¡a Solo 12 minutos de la playa!</span
-                >
+              <!-- Swiper Mahuida -->
+              <div class="swiper swiper-mahuida w-full h-full">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/Mahuida/1-compress.webp" alt="Proyecto Mahuida 1" class="w-full h-56 object-cover" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/Mahuida/2-compress.webp" alt="Proyecto Mahuida 2" class="w-full h-56 object-cover" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/Mahuida/3-compress.webp" alt="Proyecto Mahuida 3" class="w-full h-56 object-cover" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/Mahuida/4-compress.webp" alt="Proyecto Mahuida 4" class="w-full h-56 object-cover" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/Mahuida/5-compress.webp" alt="Proyecto Mahuida 5" class="w-full h-56 object-cover" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/Mahuida/6-compress.webp" alt="Proyecto Mahuida 6" class="w-full h-56 object-cover" loading="lazy"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-oscuro/60 to-transparent pointer-events-none z-10"></div>
+              <div class="absolute top-4 left-4 z-20">
+                <span class="bg-verde/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full"
+                  >¡a Solo 12 minutos de la playa!</span>
               </div>
             </div>
 
@@ -1178,6 +1174,9 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Swiper carousel script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" crossorigin="anonymous"></script>
 
     <script src="script.js"></script>
   </body>
