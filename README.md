@@ -34,11 +34,7 @@ web_Terrenos/
 │   ├── card-maitenes.jpg    # Card Fundo Los Maitenes
 │   ├── card-quillayes.jpeg  # Card Fundo Los Quillayes
 │   ├── card-mahuida.jpg     # Card Proyecto Mahuida
-<<<<<<< HEAD
-│   └── user.jpg             # Foto Vendedor
-=======
 │   └── user.jpg             # Foto vendedor
->>>>>>> main
 ├── index.html               # HTML principal — una sola página
 ├── script.js                # JavaScript — animaciones y micro-UIs
 ├── tailwind.config.js       # Config Tailwind: paleta, safelist, content paths
